@@ -1,0 +1,691 @@
+html,
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    /* background: url("./images/information_background.png") no-repeat; */
+    height: 6540px;
+    overflow: hidden;
+}
+
+#nav {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: top 0.3s ease-in-out;
+    z-index: 3;
+    height: 84px;
+}
+#menu_bar {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 12px;
+    display: flex;
+}
+#nav >#menu_bar > h1 {
+    display: inline-block;
+}
+#nav> #menu_bar > ul {
+    display: flex;
+    margin-left: auto;
+}
+
+/* #nav>ul>li:first-child {
+    margin-right: auto;
+    margin-left: 0;
+} */
+
+#menu_bar>ul>li {
+    margin-left: 35px;
+    line-height: 3;
+    
+}
+
+.menus {
+    color: white;
+    font-size: 19px;
+    text-align: center;
+}
+#nav.hidden {
+    top: -84px;
+  }
+
+#nav.nav-up {
+    top: -84px;
+}
+#nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* -------------------------------------------------------------------------------------- */
+.imageSlide {
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    margin-top:84px ;
+    position: relative;
+
+}
+
+.imageSlide>ul {
+    width: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.imageSlide>ul li {
+    width: 33.33%;
+}
+
+.imageSlide>ul>li img {
+    width: 100%; 
+    height: 800px;  
+    /* object-fit: cover; */
+}
+
+/* 인디케이터 */
+#indicator {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#indicator>li {
+    margin: 0 11.5px;
+    width: 8px;
+    height: 8px;
+    border: 4px solid transparent; 
+    background-color:#AAAAAA;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.4);
+
+    opacity: 0.7;
+    cursor: pointer;
+
+    transition-duration: 400ms;
+}
+
+#indicator>li:hover {
+    opacity: 1;
+    background-color: white;
+    
+}
+
+#indicator>li>span {
+    display: none;
+}
+
+#indicator>li.on {
+    border: 4px solid black;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    cursor: default;
+    opacity: 1;
+}
+/* --------------------------------------------- */
+button {
+    all: unset;
+    cursor: pointer;
+    font-size: 25px;
+    border: 2px solid #cccccc;
+    border-radius: 30px;
+    padding: 8px 35px;
+    box-sizing: border-box;
+    color: #666666;
+}
+
+.check_btn {
+    background-color: #ffe600;
+    border: 2.5px solid #ffe600;
+    border-radius: 30px;
+    padding: 8px 35px;
+    box-sizing: border-box;
+}
+
+#back_btn {
+    background-color: #ffe600;
+    border:2.5px solid #ffe600 ;
+    border-radius: 30px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+}
+#back_btn > img {
+    width: 25px;
+}
+
+/* -------------------------------------------------------------- */
+
+#search_tie {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 700px;
+}
+
+#search_btn {
+    width: 70%;
+    margin-left: 150px;
+
+}
+
+#search_btn>h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 300px 0 100px;
+}
+
+#lens_filter1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#lens_filter2,#lens_filter3 {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+#lens_filter2> li:first-child,
+#lens_filter3> li:first-child {
+    margin-left: 0;
+}
+#lens_filter2> li,
+#lens_filter3> li{
+    margin-top: 13px;
+    margin-left: 8px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 니콘 소개  */
+#nikon_explain {
+    background-color: rgb(248, 247, 243);
+    height: 1840px;
+    margin: 0 auto;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.4), /* 아래쪽 그림자 */
+    0 4px 4px -4px rgba(0, 0, 0, 0.4); /* 위쪽 그림자 */
+}
+#exp{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#nikon_explain p, h2{
+    text-align: center;
+}
+#nikon_explain p{
+    line-height: 1.5;
+}
+#nikon_explain h2{
+    margin-bottom: 50px;
+    padding-top: 100px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+#intro{
+    background-color: rgb(248, 247, 243);
+    height: 1500px;
+    margin: 0 auto;
+    margin-top: 4px;
+}
+#introimg{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+}
+#introimg > img {
+    padding-bottom: 50px;
+    width: 680px;
+    margin: 0 auto;
+}
+#introWrite {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 680px;
+    left: 320px;
+
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      margin-left: -100px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+
+#introWrite > p{
+    font-size: 21px;
+    display: inline-block;
+}
+#introWrite > h3 {
+    font-weight: 900;
+    font-size: 50px;
+    display: inline-block;
+
+    margin-bottom: 13px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 선글라스 소개 */
+#sunglasses_bx{
+    /* background-color: rgb(248, 247, 243); */
+    background: url("../images/sunglasses_background4.png") no-repeat;
+    height: 1250px;
+    margin: 0 auto;
+    margin-top: 4px;
+    position: relative;
+
+}
+#sunglasses_inf{
+    padding-top: 100px;
+}
+.glasses {
+    width: 1200px;
+    margin: 0 auto; 
+    /* padding-top: 100px;  */
+}
+.glasses > h2{
+    /* text-align: left; */
+    text-align: center;
+    font-size: 100px;
+    font-weight: 700;
+    font-family: 'Nanum Myeongjo', serif;
+}
+.glasses > p {
+    /* margin: 50px 50px 0 0px; */
+    text-align: center;
+    /* font-size: 16px; */
+    margin-top: 50px;
+}
+#glasses_bx {
+    /* background-color: rgb(248, 247, 243); */
+    height: 2600px;
+    margin: 0 auto;
+    margin-top: 4px;
+}
+#explains {
+    background-color: #f8f5ef;
+    height: 900px;
+}
+#sunglasses_Imgbx{
+    margin-top: 120px;
+    position: relative;
+}
+#glass_Imgbx {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 130px;
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+    width: 499px;
+}
+#use_the_product {
+    display: flex;
+    overflow: hidden;
+    width: 300%;
+}
+#use_the_product >li {
+    /* margin-left: 50px; */
+    width: 33.33%;
+}
+/* #use_the_product >li:first-child {
+    margin-left: 0;
+} */
+#use_the_product >li img {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#sunglasses_Imgbx >#sunglasses1{
+    width: 900px;
+    opacity:  0;
+    transition: opacity 0.7s ease-in-out;
+}
+.center_img {
+    opacity: 1;
+}
+#sunglasses_Imgbx >#sunglasses2{
+    height:700px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+}
+#sunglasses_Imgbx >#sunglasses3{
+    height:500px;
+    position: absolute;
+    top: 90%;
+    left: 80%;
+}
+#glasses_product_bx{
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    position: absolute;
+    bottom: -120px;;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 14px 24px rgba(0,0,0,.1);
+    overflow: hidden;
+}
+#glasses_product {
+    width: 300%;
+    position: relative;
+    display: flex;
+
+}
+#product1_ex{
+    font-size: 12px; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+#product2_ex{
+    font-size: 14px; 
+    text-align: center;
+    margin-bottom: 25px;
+}
+#product3_ex {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#glasses_product>li{
+    width: 33.33%;
+    height: 265px;
+}
+
+#glasses_product>li img {
+    width: 200px;
+    margin: 35px auto 25px auto;
+}
+
+#transitions_lens {
+    /* display: flex;
+    flex-direction: column; */
+    position: absolute;
+    bottom: -10px;
+    /* right: 120px; */
+    left: 63%;
+}
+
+#glasses_product>li h4 {
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+#transitions_lens >h3 {
+    font-size: 35px;
+    margin-bottom: 14px;
+}
+#transitions_lens > p {
+    margin-bottom: 55px;
+    text-align: left;
+    /* font-size: 17px; */
+}
+.view_details_button {
+    border: 2px solid #cccccc;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* ------------------------------------------------------------------- */
+#indicator2 {
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+#indicator2 > li {
+    margin: 0 6px;
+    width: 8px;
+    height: 8px;
+    background-color:#888888;
+    border-radius: 50%;
+    border: 4px solid #f3f3f3;;
+    opacity: 0.5;
+    cursor: pointer;
+
+    transition-duration: 400ms;
+}
+#indicator2 > li > span{
+    display: none;
+}
+#indicator2 > li.on2{
+    border: 4px solid black;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    text-align: center;
+
+    cursor: default;
+    opacity: 0.8;
+}
+#indicator2 >li:hover {
+    opacity: 1;
+}
+/* ------------------------------------------------------------------- */
+#rest {
+    position: relative;
+}
+#rest_img_bx {
+    /* display: flex; */
+    position: relative;
+}
+#rest > h3{
+    font-family: 'Playball', cursive;
+    font-size: 80px;
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    color: #888888;
+    transform: translate(-50%,-50%);
+    opacity: 0.1;
+    user-select:none
+}
+#rest > h2{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 25px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+#rest>p {
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 110px;
+}
+
+#rest_img1 {
+    width: 450px;
+    margin-left: 20px;
+    opacity:  0;
+    transition: opacity 0.8s ease-in-out;
+}
+#rest_img2 {
+    position: absolute;
+    bottom: -220px;
+    right: 300px;
+    height: 450px;
+}
+
+#rest_img3 {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    height: 340px;
+}
+
+#rest_img5 {
+    position: absolute;
+    bottom: -100px;
+    right: 100px;
+    height: 430px;
+    opacity:  0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#resting_fatigue_lens {
+    margin: 50px;
+}
+
+#resting_fatigue_lens >h3 {
+    font-size: 35px;
+    margin-bottom: 14px;
+}
+#resting_fatigue_lens > p {
+    margin-bottom: 45px;
+    text-align: left;
+}
+/* ------------------------------------------------------------------- */
+
+
+#explains2 {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    height: 900px;
+}
+
+#explains_wrap {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.scroll_bar2 {
+    margin-top: 300px;
+}
+
+#performance > h2,
+p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#performance > h2 {
+    font-size: 30px;
+}
+
+#performance > p {
+    font-size: 19px;
+}
+
+#performance1 {
+    margin-top: 150px;
+}
+
+#performance2,
+#performance3 {
+    margin-top: 70px;
+}
+
+.perform {
+    width: 250px;
+    background-color: white;
+    padding: 40px 50px;
+    box-shadow: 4px 4px 4px rgba(0.1, 0.1, 0.1, 0.4);
+
+    margin-left: 200px;
+}
+
+.perform>img {
+    width: 240px;
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+
+#spectacle_lens,
+#sunglasses {
+    width: 380px;
+    margin-left: 100px;
+}
+
+#spectacle_lens>h1,
+#sunglasses>h1 {
+    margin-bottom: 40px;
+    font-size: 55px;
+}
+
+#spectacle_lens>p,
+#sunglasses>p {
+    font-size: 21px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#performance {
+    width: 50%;
+}
+
+#quick-menu {
+    background: #ffe600;
+    height: 500px
+}
+
+#quick-menu>ul {
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 85px;
+}
+
+#quick-menu>ul>li {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+}
+
+#quick-menu>ul>li p {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#quick-menu>ul>li img {
+    margin: 0 auto;
+    height: 100px;
+}
+
+#quick-menu>ul>li a {
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+#quick-menu>ul>li:hover {
+    background-color: white;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #f3f5f7;
+    height: 60px;
+    font-size: 13px;
+    line-height: 4.2;
+    text-align: center;
+}
